@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html data-ng-app="app" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS</title>
+    <script src="assets/js/angular1.9.9.min.js"></script>
+    <script src="ngjs/ng_second.js"></script>
+    <!-- Bootstrap library -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script> 
+   
+</head>
+<body> 
+    <div  ng-app="myApp" ng-controller="PostsCtrlAjax">
+         
+         
+
+        <div class="container">
+		   
+		  <table class="table col-md-6">
+		    <thead>
+		      <tr>
+		        <th>id</th>
+		        <th>Name</th>
+		        <th>Code</th>
+		        <th>Population</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr ng-repeat="ctr in posts.data">
+		        <td>{{ctr.id}}</td>
+		        <td>{{ctr.name}}</td>
+		        <td>{{ctr.code}}</td>
+		        <td>{{ctr.population}}</td>
+		      </tr>
+		    </tbody>
+		  </table>
+		</div>
+
+    </div>
+
+
+</body>
+</html>

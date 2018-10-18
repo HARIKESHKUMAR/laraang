@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html data-ng-app="app" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS</title>
+    <script src="assets/js/angular1.9.9.min.js"></script>
+    <script src="ngjs/ng_second.js"></script>
+    <!-- Bootstrap library -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+</head>
+<body> 
+    <div id="ng-app" ng-app="myApp" ng-controller="PostsCtrlAjax">
+        <div ng-repeat="list in posts.category_list"> 
+
+            <div class='time'> 
+            
+              <p>{{list.category_id}}-{{list.category_name}}</p>  
+
+              <img ng-src="{{list.category_img_url}}" height="{{list.cat_img_size[0]}}px;" width="{{list.cat_img_size[1]}}"> 
+                 {{list.permalink}}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
