@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('getdata','AngularjsController@getData');
+
+Route::get('load','htmlController@loadPage');
