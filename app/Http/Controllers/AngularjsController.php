@@ -11,5 +11,11 @@ class AngularjsController extends Controller
 	    $cdata=Country::select('id','name','code','population')->get(); 
         return response()->json(['status'=>'success','code'=>200,'data'=>$cdata]);
 	}
+
+	public function delData(Request $request)
+	{
+		$status=Country::where('id',20)->delete();
+		return response()->json(['status'=>'success','code'=>200]);
+	}
      
 }

@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>AngularJS</title>
-    <script src="angular/assets/js/angular1.9.9.min.js"></script>
+    <script src="angular/assets/js/angular1.6.9.min.js"></script>
     <script src="angular/ngjs/country.js"></script>
     <link   href="angular/assets/css/bootstrap.min.css" rel="stylesheet"> 
     <script src="angular/assets/js/jquery.min.js"></script> 
     <script src="angular/assets/js/bootstrap.min.js"></script>
+    <!--https://spring.io/guides/gs/consuming-rest-angularjs/
+    https://appdividend.com/2017/06/14/integrate-admin-template-in-angular-4-application/-->
    
 </head>
 <body> 
@@ -24,6 +26,7 @@
 		        <th>Name</th>
 		        <th>Code</th>
 		        <th>Population</th>
+		        <th>Action</th>
 		      </tr>
 		    </thead>
 		    <tbody>
@@ -32,6 +35,8 @@
 		        <td>{{ctr.name}}</td>
 		        <td>{{ctr.code}}</td>
 		        <td>{{ctr.population}}</td>
+		        <td><a ng-click="editEvent(ctr.id)" class="btn btn-xs btn-success">Edit</a>
+		            <a ng-click="deleteEvent(ctr.id)" class="btn btn-xs btn-danger">Del</a> </td>
 		      </tr>
 		    </tbody>
 		  </table>
