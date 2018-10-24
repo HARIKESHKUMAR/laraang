@@ -12,10 +12,10 @@ app.controller('CountryController', function($scope,$http) {
 
 
     $scope.deleteEvent=function(id){
-         
-        $http.get('http://127.0.0.1:8000/delData').
+
+        $http.get("http://127.0.0.1:8000/deldata", {params:{"delid": id}}).
           then(function(response) {
-              $scope.posts = response.data;
+              $scope.delmsg = response.status;
           },function (error){
           alert('Something went wrong'); 
         });

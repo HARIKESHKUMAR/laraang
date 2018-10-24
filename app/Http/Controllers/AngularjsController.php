@@ -8,14 +8,17 @@ class AngularjsController extends Controller
 {
 	public function getData(Request $request)
 	{
-	    $cdata=Country::select('id','name','code','population')->get(); 
+	    $cdata=Country::select('id','name','code','population')->where('status',1)->get(); 
         return response()->json(['status'=>'success','code'=>200,'data'=>$cdata]);
 	}
 
-	public function delData(Request $request)
-	{
-		$status=Country::where('id',20)->delete();
-		return response()->json(['status'=>'success','code'=>200]);
+	public function deleteData(Request $request)
+	{   
+	     echo $request->delid;
+		$status=Country::where('id',$request->delid)->update(['status'=>0]);
+		return response()->json(['status'=>'success','code'=>200,]);
+
+		
 	}
      
 }

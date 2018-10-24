@@ -17,6 +17,6 @@ Route::get('/', function () {
 
 Route::get('getdata','AngularjsController@getData');
 
-Route::get('deldata','AngularjsController@delData');
+Route::get('deldata','AngularjsController@deleteData');
 
 Route::get('load','htmlController@loadPage');
